@@ -1,0 +1,21 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Update</h1>
+
+<div class="container">
+
+
+    <form action="/Home/Update" method="post">
+        <div class="form-group w-75">
+            <input type="hidden" name="StudentId" value="@Model.StudentId"/>
+            <input type="text" name="StudentName" value="@Model.StudentName" class="form-control my-2 w-50" />
+            <input type="number" name="StudentNumber" value="@Model.StudentNumber" class="form-control my-2 w-50" />
+
+            <input type="submit" class="btn btn-success" value="UPDATE" />
+        </div>
+
+    </form>
+</div>

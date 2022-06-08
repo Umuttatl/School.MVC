@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Student>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Students</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Student Number</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+        <td>@item.StudentName</td>
+            <td>@item.StudentNumber</td>
+            <td>
+                <a href="/Home/Update/@item.StudentId" class="btn btn-success">UPDATE</a>
+            </td>
+            <td>
+            <form action="/Home/Delete" method="post">
+                <input type="hidden" name="id" value="@item.StudentId">
+
+                <input type="submit" value="DELETE" class="btn btn-danger text-light">
+            </form>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+

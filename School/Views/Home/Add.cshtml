@@ -1,0 +1,22 @@
+﻿@model Student
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add Student</h1>
+
+<div class="container">
+
+    <form action="/Home/Add" method="post">
+        <div class="form-group w-75">
+            <label>Student Name</label>
+            <input type="text" name="StudentName" class="form-control my-2 w-50" />
+            <br />
+            <label>Student Number</label>
+            <input type="number" name="StudentNumber" class="form-control my-2 w-50" />
+
+            <input type="submit" value="Add" class="btn btn-success" />
+        </div>
+    </form>
+</div>
